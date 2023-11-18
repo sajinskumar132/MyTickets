@@ -1,10 +1,9 @@
 "use client"
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Home({ children }:{
-  children: React.ReactNode
-}) {
+
+const Home = ({ children }:any) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -17,3 +16,5 @@ export default function Home({ children }:{
   }, [router]);
   return <main>{children}</main>;
 }
+
+export default Home;
